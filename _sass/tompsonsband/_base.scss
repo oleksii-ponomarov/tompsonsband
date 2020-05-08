@@ -37,6 +37,7 @@ body {
 
 section {
   position: relative;
+  overflow-x: hidden;
 
   &:nth-child(even) {
     background: $background-color;
