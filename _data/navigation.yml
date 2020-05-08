@@ -1,0 +1,14 @@
+# home links
+home:
+
+  - title: "Дивитися"
+    url: /watch
+
+  - title: "Слухати"
+    url: /listen
+
+  - title: "Читати"
+    url: /read
+
+  - title: "Зв'язатися"
+    url: /contact

@@ -1,0 +1,62 @@
+---
+layout: watch
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="content-wrapper">
+        <div class="watch-gallery">
+        	{% for img in page.photos %}
+						<a 
+						href="#photo{{ forloop.index }}" 
+						class="watch-gallery-element watch-gallery-thumbnail{{ forloop.index }}"
+						></a>
+					{% endfor %}
+				</div>
+			
+				{% for img in page.photos %}
+					<div class="watch-lightbox" id="photo{{ forloop.index }}">
+
+						<a href="#" class="back">
+							<img src="{{ img.url }}" class="lightbox-image">
+						</a>
+
+						<a href="#photo
+							{% if forloop.first %}
+								{{ forloop.length }}
+							{% else %}
+								{{ forloop.index | minus: 1 }}
+							{% endif %}"
+						class="arrow left">
+							<img src="assets/img/logos/left-arrow.svg">
+						</a>
+
+						<a href="#photo
+							{% if forloop.last %}
+								1
+							{% else %}
+								{{ forloop.index | plus: 1 }}
+							{% endif %}"
+						class="arrow right">
+							<img src="assets/img/logos/right-arrow.svg">
+						</a>
+
+					</div>
+				{% endfor %}
+				
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+</body>
+
+</html>

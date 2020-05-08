@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+/* transitions*/
+
+* {
+	transition-property: color, border-color, background-color, opacity, transform;
+  transition-duration: 0.25s;
+}
+
+*::after {
+	transition: opacity 0.5s;
+}
+
+@font-face {
+	font-family: "a_AvanteB";
+	src: url("fonts/a_AvanteB.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+}
+
+$base-font-family: "a_AvanteB" !default;
+// $base-font-family: "Montserrat" !default;
+$base-font-size:   20px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$large-font-size:  20px;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     40px !default;
+
+/* colors */
+$text-color:       #FFFFFF !default;
+$hover-color:	   #FEA62D;
+$link-color:	   #FFFFFF;
+$background-color: #000000 !default;
+$grey-color:       #eee !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$text-width:    800px !default;
+$content-width: 1024px;
+
+$on-palm:          650px !default;
+$on-laptop:        800px !default;
+
+$corner-radius: 8px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "tompsonsband/base",
+  "tompsonsband/layout",
+  "tompsonsband/syntax-highlighting",
+  "galleries/home",
+  "galleries/read",
+  "galleries/watch"
+;

@@ -1,0 +1,63 @@
+---
+layout: home
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="gallery-item slide1" >
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="gallery-item slide2">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="gallery-item slide3">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="gallery-item slide4">
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+
+    <main class="page-content" aria-label="Content">
+    	<div class="text-wrapper">
+				<p>Tompsons Band - це музичний коктейль на основі мелодійного вокалу, з додаванням яскравих нот труби, драйвових гітарних акордів, оксамитового звучання контрабасу та запальних ритмів барабанів. Гурт із Києва, Україна, на своїх концертах дарує своїм слухачам виключно позитивні емоції й заряджає веселим настроєм. У нашому репертуарі - найкращі пісні, від джазу і блюзу до диско-фанку та світових хітів.</p>
+			</div>
+		</main>
+
+    {%- include footer.html -%}
+
+		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper ('.swiper-container', {
+				direction: 'horizontal',
+				loop: true,
+				speed: 1000,
+				autoplay: {
+					delay: 3000
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				}
+			})
+		</script>
+
+</body>
+
+</html>

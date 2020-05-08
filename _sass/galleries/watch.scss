@@ -1,0 +1,147 @@
+/*Gallery*/
+
+.watch-gallery {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.watch-gallery-element {
+	display: block;
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	/*filter: saturate(0);*/
+
+	&::after {
+		display: block;
+		opacity: 0;
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255,255,255,1);
+	}
+
+	&:hover::after {
+		opacity: 0.2;
+	}
+}
+
+.watch-lightbox {
+	display: none;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.9);
+
+	&:target {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.back {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.lightbox-image {
+	max-height: 90%;
+	max-width: 90%;
+
+	@include media-query($on-palm) {
+		max-width: 100%;
+		max-width: 100%;
+	}
+}
+
+.arrow {
+	position: absolute;
+	z-index: 4;
+	width: 100px;
+	height: 100px;
+	padding: 50px;
+	opacity: 0.2;
+	transition: width, height, opacity, padding;
+	transition-duration: 0.5s;
+
+	&:hover {
+		opacity: 1;
+		width: 120px;
+		height: 120px;
+		padding: 40px;
+	}
+
+	@include media-query($on-palm) {
+		padding: 0;
+		width: 50px;
+		height: 50px;
+		
+		&:hover {
+			width: 50px;
+			height: 50px;
+			padding: 0;
+		}
+	}
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	right: 0;
+}
+
+.watch-gallery-thumbnail1 {
+	background-image: url('img/watch/pic1.webp');
+}
+
+.watch-gallery-thumbnail2 {
+	background-image: url('img/watch/pic2.webp');
+}
+
+.watch-gallery-thumbnail3 {
+	background-image: url('img/watch/pic3.webp');
+}
+
+.watch-gallery-thumbnail4 {
+	background-image: url('img/watch/pic4.webp');
+}
+
+.watch-gallery-thumbnail5 {
+	background-image: url('img/watch/pic5.jpg');
+	background-position: top;
+}
+
+.watch-gallery-thumbnail6 {
+	background-image: url('img/watch/thumbs/pic6.jpg');
+}
+
+.watch-gallery-thumbnail7 {
+	background-image: url('img/watch/thumbs/pic7.jpg');
+	background-position: top 20% center;
+}
+
+.watch-gallery-thumbnail8 {
+	background-image: url('img/watch/thumbs/pic8.jpg');
+}
+
+.watch-gallery-thumbnail9 {
+	background-image: url('img/watch/thumbs/pic9.jpg');
+}

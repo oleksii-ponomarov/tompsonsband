@@ -1,0 +1,55 @@
+---
+layout: contact
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+    <main class="page-content" aria-label="Content">
+      <section>
+	      <div class="content-wrapper">
+	      	<h1>Зв'яжіться з нами в будь-який зручний для Вас спосіб</h1>
+	      	<div class=contacts>
+		      	<p>
+		      		<span class="icon">📞</span><a href="tel:+380637456540">+38 063 7456540</a>
+		      	</p>
+		      	<p>
+		      		<span class="icon">✉</span><a href="mailto:tompsonsband@gmail.com">tompsonsband@gmail.com</a>
+		      	</p>
+		      </div>
+		    </div>
+		  </section>
+		  <section>
+		  	<div class="content-wrapper">
+			  	<h1>Завантажити наші репертуар та райдер</h1>
+			  	<a href="assets/RepertoireTB.pdf" class="btn" target="_blank">Репертуар</a>
+			  	<a href="assets/RiderTB.pdf" class="btn" target="_blank">Техрайдер</a>
+			  </div>
+		  </section>
+		  <section>
+		  	<p id="sent">
+		      Вітаємо! Вашу заявку надіслано.<br>
+		      Ми зв'яжемося з Вами якомога скоріше!
+	      </p>
+		  	<div class="content-wrapper" id="form">
+	        <h1>Замовити наш гурт</h1>
+	        <form onsubmit="return false">
+		        <input type="text" placeholder="Ім'я" id="name" name="name" class="text-input" required="true">
+		        <input type="text" placeholder="Телефон" id="phone" name="phone" class="text-input" required="true">
+		        <textarea placeholder="Розкажіть нам про свій захід..." id="info" name="info" class="text-input" required="true"></textarea>
+		        <button class="btn" onclick="sendInfo(document.getElementById('name').value, document.getElementById('phone').value, document.getElementById('info').value)">Надіслати заявку</button>
+		      </form>
+	      </div>
+	    </section>
+    </main>
+
+    {%- include footer.html -%}
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+
+</html>
