@@ -5,7 +5,7 @@
 /* transitions*/
 
 * {
-	transition-property: color, border-color, background-color, opacity, transform;
+	transition-property: color, border-color, box-shadow, text-shadow, background-color, opacity, transform;
   transition-duration: 0.25s;
 }
 
@@ -66,6 +66,17 @@ $corner-radius: 8px;
 
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
+}
+
+@mixin hover-border {
+  border-color: $hover-color;
+  box-shadow: 0 0 7px rgba(254, 166, 45, 0.4);
+  background: rgba(254,166,45,0.05);
+}
+
+@mixin hover-link {
+  color: $hover-color;
+  text-shadow: 0 0 7px rgba(254, 166, 45, 0.4);
 }
 
 // Import partials.

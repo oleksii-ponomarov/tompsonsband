@@ -9,6 +9,7 @@
 
 	a:hover {
 		color: #FFFFFF;
+		text-shadow: none;
 	}
 
 	@include media-query(750px) {
@@ -56,6 +57,7 @@
 
 	&:hover {
 		color: #FFFFFF;
+		text-shadow: none;
 	}
 
 	&:target {

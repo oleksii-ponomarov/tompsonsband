@@ -161,11 +161,12 @@ footer {
   box-sizing: border-box;
   padding: 7px;
   margin: 0 10px;
-}
 
-.social-logo:hover {
-  background: #FEA62D;
-  transition: background 0.25s;
+  &:hover {
+    background: #FEA62D;
+    transition: background 0.25s;
+    box-shadow: 0 0 7px rgba(254, 166, 45, 0.4);
+  }
 }
 
 .copyright {
@@ -219,7 +220,7 @@ footer {
   font-family: $base-font-family;
 
   &:hover {
-    border-color: $hover-color;
+    @include hover-border;
   }
 
   &:focus {
@@ -249,8 +250,8 @@ footer {
   cursor: pointer;
 
   &:hover {
-    border-color: $hover-color;
     color: $hover-color;
+    @include hover-border;
   }
 
   &:focus {
@@ -344,4 +345,71 @@ footer {
       @include relative-font-size(1.125);
     }
   }
+}
+
+.more-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  top: 10%;
+  bottom: 10%;
+  right: 0;
+  left: 75%;
+
+  p {
+    right: 20%;
+    position: absolute;
+    opacity: 0;
+    font-size: 1em;
+  }
+
+  &:hover .more {
+    opacity: 1;
+    transform: none;
+  }
+
+  &:hover p {
+    opacity: 1;
+    color: $text-color;
+    text-shadow: none;
+  }
+
+  .more {
+    opacity: 0.2;
+    height: 80px;
+    transform: translateX(-100px); 
+  }
+
+  @include media-query(1024px) {
+    p {
+      display: none;
+    }
+  }
+
+  @include media-query($on-palm) {
+    display: none;
+  }
+}
+
+.video {
+  max-width: 90%;
+  width: 560px;
+  height: 315px;
+
+  @include media-query($on-palm) {
+    height: 250px;
+  }
+
+  @include media-query(500px) {
+    height: 200px;
+  }
+
+  @include media-query(380px) {
+    height: 150px;
+  }
+}
+
+.gallery-video {
+  margin-top: 20px;
 }

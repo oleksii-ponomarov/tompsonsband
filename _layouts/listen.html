@@ -1,0 +1,40 @@
+---
+layout: listen
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="content-wrapper">
+      	<audio controls>
+				  <source src="assets/mp3/mack.mp3" type="audio/mpeg">
+				  Your browser does not support the audio tag.
+				</audio><br>
+				<audio controls>
+				  <source src="assets/mp3/is.mp3" type="audio/mpeg">
+				</audio><br>
+				<audio controls>
+				  <source src="assets/mp3/pachuco.mp3" type="audio/mpeg">
+				</audio>
+        <!-- <audio id="player" src="assets/mp3/mack.mp3"></audio>
+				<div>
+				   <button nonclick = "document.getElementById('player').play()">Play</button>
+				   <button onclick = "document.getElementById('player').pause()">Pause</button>
+				   <button onclick = "document.getElementById('player').volume += 0.2">Vol+</button>
+				   <button onclick = "document.getElementById('player').volume -= 0.2">Vol-</button>
+				</div> -->
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+</body>
+
+</html>
