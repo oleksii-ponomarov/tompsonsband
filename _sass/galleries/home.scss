@@ -14,6 +14,14 @@
 			height: 400px;
 		}
 
+		@include media-query($small) {
+			height: 300px;
+		}
+
+		@include media-query($x-small) {
+			height: 250px;
+		}
+
 		&.slide1 {
 			background-image: url('img/slider/photo1.jpg');
 			background-color: #e8e8ea;
@@ -25,7 +33,7 @@
 
 .slide2 {
 	background: url('img/slider/photo2.jpg');
-	background-position: top 30% center;
+	background-position: top 35% center;
 }
 
 .slide3 {
