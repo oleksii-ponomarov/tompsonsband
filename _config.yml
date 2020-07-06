@@ -17,8 +17,8 @@ title: Tompsons Band
 email: tompsonsband@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Jazz band from Kyiv, Ukraine
-baseurl: "/tompsonsband" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "tompsonsband.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -29,8 +29,8 @@ plugins:
   - jekyll-feed
 
 sass:
-    sass_dir: _sass
-    style: expanded
+  sass_dir: _sass
+  style: expanded
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
