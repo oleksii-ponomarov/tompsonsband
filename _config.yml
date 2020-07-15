@@ -18,7 +18,8 @@ email: tompsonsband@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Jazz band from Kyiv, Ukraine
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "tompsonsband.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://tompsonsband.com" # the base hostname & protocol for your site, e.g. http://example.com
+lang: uk_UA
 twitter_username: jekyllrb
 github_username:  jekyll
 
