@@ -27,7 +27,7 @@
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -68,7 +68,9 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
     border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
