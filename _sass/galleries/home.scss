@@ -33,7 +33,7 @@
 
 .slide2 {
 	background: url('img/slider/photo2.jpg');
-	background-position: top 35% center;
+	background-position: center;
 }
 
 .slide3 {
@@ -44,6 +44,11 @@
 .slide4 {
 	background: url('img/slider/photo4.jpg');
 	background-position: top 20% center;
+}
+
+.slide5 {
+  background: url('img/slider/photo5.jpg');
+	background-position: top 35% center;
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
