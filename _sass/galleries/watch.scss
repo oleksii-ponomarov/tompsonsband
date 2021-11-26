@@ -1,22 +1,26 @@
 /*Gallery*/
 
 .watch-gallery {
-	display: flex;
-	margin: auto;
-	justify-content: center;
-	flex-wrap: wrap;
+	display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  @include media-query($on-palm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-query($small) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .watch-gallery-element {
 	display: block;
-	width: 300px;
-	height: 200px;
-	margin: 10px;
+  padding-top: 66.6%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
-	/*filter: saturate(0);*/
 
 	&::after {
 		display: block;

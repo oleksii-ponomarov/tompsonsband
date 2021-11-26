@@ -5,63 +5,67 @@ layout: watch
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="content-wrapper">
+  <main class="page-content" aria-label="Content">
+    <section>
+      <div class="wrapper-large">
+        <h1>Фото</h1>
         <div class="watch-gallery">
-        	{% for img in page.photos %}
-						<a 
-						href="#photo{{ forloop.index }}" 
-						class="watch-gallery-element watch-gallery-thumbnail{{ forloop.index }}"
-						></a>
-					{% endfor %}
-				</div>
-			
-				{% for img in page.photos %}
-					<div class="watch-lightbox" id="photo{{ forloop.index }}">
-
-						<a href="#" class="back">
-							<img src="{{ img.url }}" class="lightbox-image">
-						</a>
-
-						<a href="#photo
-							{% if forloop.first %}
-								{{ forloop.length }}
-							{% else %}
-								{{ forloop.index | minus: 1 }}
-							{% endif %}"
-						class="arrow left">
-							<img src="assets/img/logos/left-arrow.svg">
-						</a>
-
-						<a href="#photo
-							{% if forloop.last %}
-								1
-							{% else %}
-								{{ forloop.index | plus: 1 }}
-							{% endif %}"
-						class="arrow right">
-							<img src="assets/img/logos/right-arrow.svg">
-						</a>
-
-					</div>
-				{% endfor %}
-
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/zeUZAfuOgiA?showinfo=0&hl=en&color=white&rel=0" frameborder="0" allow="autoplay" allowfullscreen class="video gallery-video"></iframe>
-
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/tAAiyVJLP2o?showinfo=0&hl=en&rel=0" frameborder="0" allow="autoplay" allowfullscreen class="video gallery-video"></iframe>
-
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/Z2m0XoBn_Aw?showinfo=0&hl=en&rel=0" frameborder="0" allow="autoplay" allowfullscreen class="video gallery-video"></iframe>
-
+          {% for img in page.photos %}
+          <a href="#photo{{ forloop.index }}"
+            class="watch-gallery-element watch-gallery-thumbnail{{ forloop.index }}"></a>
+          {% endfor %}
+        </div>
+        {% for img in page.photos %}
+        <div class="watch-lightbox" id="photo{{ forloop.index }}">
+          <a href="#" class="back">
+            <img src="{{ img.url }}" class="lightbox-image">
+          </a>
+          <a href="#photo
+                    {% if forloop.first %}
+                      {{ forloop.length }}
+                    {% else %}
+                      {{ forloop.index | minus: 1 }}
+                    {% endif %}" class="arrow left">
+            <img src="assets/img/logos/left-arrow.svg">
+          </a>
+          <a href="#photo
+                    {% if forloop.last %}
+                      1
+                    {% else %}
+                      {{ forloop.index | plus: 1 }}
+                    {% endif %}" class="arrow right">
+            <img src="assets/img/logos/right-arrow.svg">
+          </a>
+        </div>
+        {% endfor %}
       </div>
-    </main>
+    </section>
 
-    {%- include footer.html -%}
+    <section>
+      <div class="wrapper-large">
+        <h1 id="video">Відео</h1>
+        <div class="video-wrapper"><iframe width="560" height="315"
+            src="https://www.youtube.com/embed/zeUZAfuOgiA?showinfo=0&hl=en&color=white&rel=0" frameborder="0"
+            allow="autoplay" allowfullscreen class="video"></iframe></div>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/tAAiyVJLP2o?showinfo=0&hl=en&rel=0"
+            frameborder="0" allow="autoplay" allowfullscreen class="video"></iframe>
+        </div>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Z2m0XoBn_Aw?showinfo=0&hl=en&rel=0"
+            frameborder="0" allow="autoplay" allowfullscreen class="video"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {%- include footer.html -%}
 
 </body>
 
