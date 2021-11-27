@@ -42,14 +42,14 @@ layout: contact
 		        <input type="text" placeholder="Ім'я" id="name" name="name" class="text-input" required="true">
 		        <input type="text" placeholder="Телефон" id="phone" name="phone" class="text-input" required="true">
 		        <textarea placeholder="Розкажіть нам про свій захід..." id="info" name="info" class="text-input" required="true"></textarea>
-		        <button class="btn" onclick="sendInfo(document.getElementById('name').value, document.getElementById('phone').value, document.getElementById('info').value)">Надіслати заявку</button>
+		        <button class="btn" id="send">Надіслати заявку</button>
 		      </form>
 	      </div>
 	    </section>
     </main>
 
     {%- include footer.html -%}
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/email.js"></script>
 </body>
 
 </html>
