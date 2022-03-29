@@ -11,15 +11,15 @@ photos:
     title: "image3"
   - url: assets/img/watch/pic4.webp
     title: "image4"
-  - url: assets/img/watch/pic5.jpg
+  - url: assets/img/watch/pic5.webp
     title: "image5"
-  - url: assets/img/watch/pic6.jpg
+  - url: assets/img/watch/pic6.webp
     title: "image6"
-  - url: assets/img/watch/pic7.jpg
+  - url: assets/img/watch/pic7.webp
     title: "image7"
-  - url: assets/img/watch/pic8.jpg
+  - url: assets/img/watch/pic8.webp
     title: "image8"
-  - url: assets/img/watch/pic9.jpg
+  - url: assets/img/watch/pic9.webp
     title: "image9"
 ---
 
