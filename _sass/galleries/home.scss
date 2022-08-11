@@ -38,17 +38,22 @@
 
 .slide3 {
 	background: url('img/slider/photo3.webp');
-	background-position: center;
+	background-position: center 40%;
 }
 
 .slide4 {
 	background: url('img/slider/photo4.webp');
-	background-position: top 20% center;
+	background-position: center 20%;
 }
 
 .slide5 {
   background: url('img/slider/photo5.webp');
-	background-position: top 35% center;
+	background-position: center 35% ;
+}
+
+.slide6 {
+	background: url('img/slider/photo6.webp');
+	background-position: center;
 }
 
 .swiper-button-prev:hover, .swiper-button-next:hover {
