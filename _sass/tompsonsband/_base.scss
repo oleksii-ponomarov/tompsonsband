@@ -63,9 +63,10 @@ h1 {
 }
 
 p {
-  text-indent: 2em;
+  text-align: justify;
 
   &.read-about {
+    text-indent: 2em;
     padding-bottom: 25px;
   }
 }
